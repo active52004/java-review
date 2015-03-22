@@ -1,3 +1,5 @@
+package tom.cup;
+
 /**
  * Created by tom on 21/03/15.
  */

@@ -1,3 +1,4 @@
+import tom.cup.MusicCup;
 import tom.human.Human;
 
 /**
@@ -34,10 +35,16 @@ public class Test {
         System.out.println(newBaby.getHeight());
 
         newBaby.growHeight(120);
-        System.out.println(newBaby.getHeight());
+        Human dummy = newBaby;
+        newBaby.growHeight(20);
+        System.out.println(dummy.getHeight());
 
         newW.breath();
 
         System.out.println(Human.getPopulation());
+
+        //Define as Food, create as Corn
+        Food a1 = new Corn();
+        a1.eat();
     }
 }
