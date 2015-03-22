@@ -1,5 +1,5 @@
 package tom.human;
-
+import  tom.cup.*;
 /**
  * Created by tom on 21/03/15.
  */
@@ -38,6 +38,10 @@ public class Human {
 
     public static int getPopulation(){
         return Human.population;
+    }
+
+    public void drink(MusicCup aCup, int w){
+        aCup.drinkWater(w);
     }
 
 }

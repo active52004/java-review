@@ -1,3 +1,4 @@
+import tom.cup.BrokenCup;
 import tom.cup.MusicCup;
 import tom.human.Human;
 
@@ -19,6 +20,10 @@ public class Test {
         mc.addWater(10);
         mc.Play();
 
+        BrokenCup aB = new BrokenCup();
+        mc = aB;
+        mc.addWater(10);
+        aPerson.drink(aB, 10);
         /*
         Torch newT = new Torch();
         newT.charge(10);
