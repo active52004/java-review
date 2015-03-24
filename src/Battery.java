@@ -14,6 +14,15 @@ public class Battery {
     }
 
     public boolean use(double p){
+        try{
+            test(p);
+        }
+        catch (Exception e){
+            System.out.println("catch exception");
+            System.out.println(e.getMessage());
+            p=0.0;
+        }
+
         if(this.power >= p){
             this.power -= p;
             return true;
@@ -25,5 +34,12 @@ public class Battery {
     }
     public double getPower(){
         return this.power;
+    }
+
+    private void test(double p) throws Exception {//here should be throws
+        if(p<0){
+            Exception e = new Exception("p must be positive");
+            throw e;
+        }
     }
 }
