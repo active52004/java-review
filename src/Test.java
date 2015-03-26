@@ -8,15 +8,64 @@ import tom.human.Human;
 
 import tom.human.*;
 import java.io.*;
+import java.util.*;
 
 public class Test {
     public static void main(String[] args){
 
+        Human me = new Human("Tom");
+        me.drinkWater(0.3);
+        Human her = new Human("Adele");
+        Human.Cup mc1 = me.new Cup();//declare of normal inner class
+        Human.Cup mc2 = me.new Cup();
+        Human.Cup herc = her.new Cup();
+
+        System.out.println(mc1.whosCup());
+        System.out.println(mc2.whosCup());
+        System.out.println(herc.whosCup());
+
+        Human.Chinese m1 = new Human.Chinese();//declare of static inner class
+        m1.speak();
+        /*
+        int[] aFrom = {1,2,3,4,5};
+        int[] aTo = new int[3];
+        System.arraycopy(aFrom,1,aTo,0,3);
+        System.out.println(aTo[1]);
+
+        List<String> l1 = new ArrayList<String>();
+        l1.add("Tom");
+        l1.add("loves");
+        l1.add("Adele");
+        l1.add("Test");
+        Iterator a = l1.iterator();
+        while(a.hasNext()){
+            System.out.println(a.next());
+        }
+
+        l1.remove(3);//index is used as par
+        System.out.println(l1.get(1));
+        System.out.println(l1.size());
+
+        Set<Integer> s1 = new HashSet<Integer>();
+        s1.add(4);
+        s1.add(5);
+        s1.add(4);
+        s1.remove(5);//element is used as par
+        System.out.println(s1);
+        System.out.println(s1.size());
+
+        Map<String, Integer> m1 = new HashMap<String, Integer>();
+        m1.put("Tom", 25);//insert a <key,value> parir to the map
+        m1.put("loves",100);
+        m1.put("Adele", 24);
+        System.out.println(m1.get("Tom"));//return the value for key
+        */
+        /*
         Reservior r = new Reservior(100);
         Booth b1 = new Booth(r);
         Booth b2 = new Booth(r);
         Booth b3 = new Booth(r);
-
+        */
         /*
         NewThread thread1 = new NewThread();
         NewThread thread2 = new NewThread();

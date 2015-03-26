@@ -17,6 +17,7 @@ public class Human {
         Human.population++;
     }
 
+
     public int getHeight(){
         return this.height;
     }
@@ -40,8 +41,43 @@ public class Human {
         return Human.population;
     }
 
+    /*
     public void drink(MusicCup aCup, int w){
         aCup.drinkWater(w);
+    }
+    */
+    public class Cup{
+        private double water = 1.0;
+        public double getWater(){
+            return  this.water;
+        }
+        public void drinkWater(double w){
+            this.water -= w;
+        }
+        public String whosCup(){
+            return name;//inner class access outer field
+        }
+    }
+
+    private Cup myCup;
+    private String name;
+    public Human(String n){
+        this.myCup = new Cup();
+        this.name = n;
+        Human.population++;
+    }
+    public void drinkWater(double w){
+        myCup.drinkWater(w);
+        System.out.println(myCup.getWater());
+    }
+    public void changeName(String n){
+        this.name = n;
+    }
+
+    public static class Chinese{
+        public void speak(){
+            System.out.println("Ni hao");
+        }
     }
 
 }
